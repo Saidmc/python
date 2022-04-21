@@ -35,3 +35,20 @@ def funcClaveValor(**kwargs):
 funcClaveValor(nombre = 'Said', apPat = 'Munoz', apMat = 'Chavez')
 print('-------------------')
 funcClaveValor(nombre = 'Renic')
+
+
+#   Apartado 3: Usando funciones con numero arbitrario de argumentos y kwordarguments
+
+def miFunc2(nombre, *args, **kwargs):
+    print(f'El nombre es: {nombre}')
+
+    print(f'este es el listado de no se ques:')
+    for item in args:
+        print(f'- {item}')
+
+    print(f'este es el listado de no se ques:')
+    for clave, valor in kwargs.items():
+        print(f'{clave} ---> {valor}')
+
+    
+miFunc2('Said', 'uno', 'dos', 'tres', 'cuatro', ApPat='Munoz', ApMat='Chavez')
